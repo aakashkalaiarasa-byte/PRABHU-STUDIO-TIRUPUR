@@ -1,0 +1,16 @@
+name: Test Output Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Data
+        id: sample_step
+        run: echo "my_status=Hello World" >> $GITHUB_OUTPUT
+
+      - name: View Output
+        run: echo "The output value is ${{ steps.sample_step.outputs.my_status }}"
