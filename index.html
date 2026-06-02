@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRABHU STUDIO | Premium South Indian Photography & Videography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,500;0,600;0,700;1,400&family=Poppins:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-gold: #b8925e;
+            --brand-gold-dark: #9e7a4b;
+            --dark-charcoal: #111111;
+            --navbar-light: #ffffff; 
+            --muted-gray: #666666;
+            --light-border: #f0f0f0;
+            --bg-cream: #fbf9f6;
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 8%;
+            background: var(--navbar-light); 
+            border-bottom: 1px solid var(--light-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand-logo-img {
+            height: 85px; 
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #555555;
+            font-size: 14.5px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active-nav-link {
+            color: var(--brand-gold);
+        }
+
+        .nav-menu a.active-nav-link {
+            border-bottom-color: var(--brand-gold);
+        }
+
+        .action-button {
+            background-color: var(--brand-gold);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 26px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 15.6px;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
+        }
+
+        .action-button:hover {
+            background-color: var(--brand-gold-dark);
+            transform: translateY(-1px);
+        }
+
+        #home-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 8%;
+            background: linear-gradient(145deg, #ffffff 65%, var(--bg-cream) 100%);
+            min-height: 90vh;
+            gap: 40px;
+            text-align: center;
+            scroll-margin-top: 100px;
+        }
+
+        .hero-text-block {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-pretitle {
+            color: var(--brand-gold);
+            font-size: 13.2px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-text-block h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 69.6px;
+            line-height: 1.15;
+            color: var(--dark-charcoal);
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .hero-text-block .italicize {
+            color: var(--brand-gold);
+            font-style: italic;
+        }
+
+        .hero-description {
+            color: #555555;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            max-width: 650px;
+        }
+
+        .btn-gallery-primary {
+            background-color: var(--brand-gold);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 36px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16.8px;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+            margin-bottom: 40px;
+        }
+
+        .btn-gallery-primary:hover {
+            background-color: var(--brand-gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(184, 146, 94, 0.3);
+        }
+
+        .btn-gallery-primary svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .social-proof-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #eeeeee;
+            padding-top: 30px;
+            width: 100%;
+            max-width: 440px;
+            margin: 0 auto 20px auto;
+            gap: 20px;
+        }
+
+        .google-ratings-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            padding: 6px 14px;
+            border-radius: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .google-ratings-badge:hover {
+            border-color: var(--brand-gold);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .google-logo-mini {
+            font-weight: 700;
+            font-size: 15.6px;
+            letter-spacing: -0.5px;
+        }
+        .google-logo-mini span:nth-child(1) { color: #4285F4; }
+        .google-logo-mini span:nth-child(2) { color: #EA4335; }
+        .google-logo-mini span:nth-child(3) { color: #FBBC05; }
+        .google-logo-mini span:nth-child(4) { color: #4285F4; }
+        .google-logo-mini span:nth-child(5) { color: #34A853; }
+        .google-logo-mini span:nth-child(6) { color: #EA4335; }
+
+        .rating-stars-gold {
+            color: #ffb400;
+            font-size: 16.8px;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .rating-score-text {
+            font-size: 14.4px;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+        }
+
+        .live-pulsate-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #fff0f1;
+            color: #ff3b30;
+            font-size: 10.8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .live-pulsate-dot::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background-color: #ff3b30;
+            border-radius: 50%;
+            display: inline-block;
+            animation: livePulseEffect 1.5s infinite ease-in-out;
+        }
+
+        @keyframes livePulseEffect {
+            0%, 100% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+
+        .social-proof-panel {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .avatar-stack {
+            display: flex;
+        }
+
+        .avatar-item {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            margin-right: -12px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background-size: cover;
+            background-position: center;
+        }
+        .avatar-item:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop'); }
+        .avatar-item:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop'); }
+        .avatar-item:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop'); }
+
+        .proof-text {
+            text-align: left;
+        }
+
+        .proof-text strong {
+            font-size: 18px;
+            color: var(--dark-charcoal);
+            display: block;
+        }
+
+        .proof-text p {
+            font-size: 14.4px;
+            color: var(--muted-gray);
+        }
+
+        .storefront-feature-img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--light-border);
+            margin-top: 5px;
+            transition: var(--transition-smooth);
+        }
+
+        .storefront-feature-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-pretitle {
+            color: var(--brand-gold);
+            font-size: 13.2px;
+            letter-spacing: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 43.2px;
+            color: var(--dark-charcoal);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .geometric-rule {
+            width: 50px;
+            height: 2px;
+            background-color: var(--brand-gold);
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .geometric-rule::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--brand-gold);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+        }
+
+        .services-area {
+            padding: 100px 8%;
+            background-color: #ffffff;
+            scroll-margin-top: 100px; 
+        }
+
+        .grid-matrix {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .matrix-item {
+            background: #ffffff;
+            border: 1px solid var(--light-border);
+            padding: 40px 20px;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .matrix-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .matrix-icon-svg {
+            width: 44px;
+            height: 44px;
+            fill: none;
+            stroke: var(--brand-gold);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-bottom: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .matrix-item:hover .matrix-icon-svg {
+            transform: scale(1.08);
+            stroke: var(--brand-gold-dark);
+        }
+
+        .matrix-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 19.2px;
+            color: var(--dark-charcoal);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .matrix-item p {
+            font-size: 14.4px;
+            color: var(--muted-gray);
+            line-height: 1.6;
+        }
+
+        .gallery-area {
+            padding: 100px 8% 60px 8%;
+            background-color: var(--bg-cream);
+            scroll-margin-top: 100px;
+        }
+
+        .filter-controls-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .filter-trigger-btn {
+            background-color: #ffffff;
+            border: 1px solid var(--light-border);
+            color: var(--dark-charcoal);
+            padding: 10px 24px;
+            font-size: 14.4px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-trigger-btn:hover, .filter-trigger-btn.active-filter {
+            background-color: var(--brand-gold);
+            border-color: var(--brand-gold);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(184, 146, 94, 0.2);
+        }
+
+        .gallery-masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            min-height: 450px; 
+        }
+
+        .gallery-item-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            background-color: #fff;
+            display: block;
+            opacity: 0;
+            transform: scale(1);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .gallery-item-wrapper.hide-item {
+            display: none !important;
+        }
+
+        .gallery-item-wrapper.show-item {
+            display: block !important;
+        }
+
+        .gallery-item-wrapper img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item-wrapper:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            color: #ffffff;
+            z-index: 5;
+        }
+
+        .gallery-overlay p {
+            font-size: 13.2px;
+            letter-spacing: 1px;
+            color: var(--brand-gold);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .gallery-overlay h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 21.6px;
+            font-weight: 500;
+        }
+
+        .about-area {
+            padding: 100px 8%;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            scroll-margin-top: 100px;
+        }
+
+        .about-image-wrapper {
+            flex: 0.8;
+            max-width: 480px; 
+            width: 100%;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            max-height: 650px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+        }
+
+        .about-content-wrapper {
+            flex: 1.2;
+        }
+
+        .about-content-wrapper h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 43.2px;
+            color: var(--dark-charcoal);
+            margin-bottom: 20px;
+        }
+
+        .about-content-wrapper p {
+            color: var(--muted-gray);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            border-top: 1px solid var(--light-border);
+            padding-top: 30px;
+        }
+
+        .metric-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .metric-icon-svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: var(--brand-gold);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-bottom: 10px;
+        }
+
+        .metric-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 38.4px;
+            font-weight: 700;
+            color: var(--dark-charcoal);
+        }
+
+        .metric-number-label {
+            font-size: 13.2px;
+            color: var(--muted-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .footer-hub {
+            padding: 80px 8%;
+            background-color: var(--bg-cream);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: space-between;
+            border-top: 1px solid var(--light-border);
+            scroll-margin-top: 100px;
+        }
+
+        .hub-details-column {
+            flex: 1.2;
+            min-width: 300px;
+        }
+
+        .hub-details-column h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38.4px;
+            color: var(--dark-charcoal);
+            margin-bottom: 15px;
+        }
+
+        .hub-details-column p {
+            color: var(--muted-gray);
+            font-size: 16.8px;
+            line-height: 1.6;
+        }
+
+        .hub-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 16.8px;
+            color: #333333;
+            margin-top: 30px;
+        }
+
+        .channel-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .channel-row svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: var(--brand-gold);
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        .channel-row a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .channel-row a:hover {
+            color: var(--brand-gold);
+        }
+
+        .hub-action-card {
+            flex: 0.8;
+            min-width: 320px;
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 6px;
+            border: 1px solid var(--light-border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hub-action-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--dark-charcoal);
+            font-weight: 600;
+        }
+
+        .map-embed-container {
+            width: 100%;
+            height: 280px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--light-border);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .map-embed-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #ffffff;
+            color: var(--dark-charcoal);
+            border-top: 1px solid var(--light-border);
+            font-size: 13.5px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-bottom-left {
+            color: var(--muted-gray);
+        }
+
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--dark-charcoal);
+        }
+
+        @media (max-width: 1200px) {
+            .grid-matrix {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .navbar {
+                padding: 15px 5%;
+            }
+            .nav-menu {
+                gap: 15px;
+            }
+            #home-section {
+                padding: 60px 5%;
+            }
+            .hero-text-block h1 {
+                font-size: 50.4px;
+            }
+            .gallery-masonry-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .about-area {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 5%;
+            }
+            .about-image-wrapper {
+                max-width: 400px;
+            }
+            .footer-hub {
+                flex-direction: column;
+                padding: 60px 5%;
+            }
+            .hub-action-card {
+                width: 100%;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                padding: 20px 5%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                position: relative;
+            }
+            .grid-matrix, .gallery-masonry-grid, .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home-section" class="logo-container">
+            <img src="Logo.png" alt="Prabhu Studio Logo" class="brand-logo-img">
+        </a>
+        <nav class="nav-menu">
+            <a href="#home-section" id="nav-home" class="active-nav-link">HOME</a>
+            <a href="#services-section" id="nav-services">SERVICES</a>
+            <a href="#gallery-section" id="nav-gallery">GALLERY</a>
+            <a href="#about-section" id="nav-about">ABOUT US</a>
+            <a href="#contact-section" id="nav-contact">CONTACT</a>
+        </nav>
+        <a href="https://wa.me/919344461882?text=Hello%20Prabhu%20Studio!%20I%20visited%20your%20website%20and%20would%20like%20to%20book%20a%20session." target="_blank" class="action-button">BOOK NOW</a>
+    </header>
+
+    <section id="home-section">
+        <div class="hero-text-block">
+            <p class="hero-pretitle">Capturing Moments, Creating Memories</p>
+            <h1>We Capture <br>Your Best <span class="italicize">Moments</span></h1>
+            <p class="hero-description">
+                Prabhu Studio specializes in premium wedding photography, elegant South Indian bridal portraits, and high-end cinematic videography across Tamil Nadu.
+            </p>
+            
+            <button class="btn-gallery-primary" onclick="scrollToGallery()">
+                VIEW GALLERY 
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </button>
+            
+            <div class="social-proof-wrapper">
+                <a href="https://maps.app.goo.gl/TbV5i8RTKBKLo5o39" target="_blank" class="google-ratings-badge">
+                    <div class="google-logo-mini">
+                        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+                    </div>
+                    <div class="rating-stars-gold">★&nbsp;★&nbsp;★&nbsp;★&nbsp;★</div>
+                    <div class="rating-score-text">4.5 / 5.0 Rating</div>
+                    <div class="live-pulsate-dot">Live</div>
+                </a>
+
+                <div class="social-proof-panel">
+                    <div class="avatar-stack">
+                        <div class="avatar-item"></div>
+                        <div class="avatar-item"></div>
+                        <div class="avatar-item"></div>
+                    </div>
+                    <div class="proof-text">
+                        <strong>500+ Happy Clients</strong>
+                        <p>Capturing visual landmarks you will treasure forever.</p>
+                    </div>
+                </div>
+
+                <img class="storefront-feature-img" src="Studio.jpeg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc35953?q=80&w=600&auto=format&fit=crop'" alt="Prabhu Studio Storefront">
+            </div>
+        </div>
+    </section>
+
+    <section id="services-section" class="services-area">
+        <div class="section-header">
+            <p class="section-pretitle">What We Do</p>
+            <h2 class="section-main-title">Our Photography Services</h2>
+            <div class="geometric-rule"></div>
+        </div>
+        
+        <div class="grid-matrix">
+            <div class="matrix-item" onclick="scrollToAndFilterGallery('weddings')">
+                <svg class="matrix-icon-svg" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M12 18c-2.5 0-4.5-1.5-4.5-3.5s2-3.5 4.5-3.5 4.5 1.5 4.5 3.5-2 3.5-4.5 3.5z"/></svg>
+                <h3>Wedding Photography</h3>
+                <p>Preserving timeless cinematic narratives from your milestone occasions flawlessly.</p>
+            </div>
+            <div class="matrix-item" onclick="scrollToAndFilterGallery('baby')">
+                <svg class="matrix-icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                <h3>Baby & Kids</h3>
+                <p>Documenting life stages with high fidelity and organic, candid sensitivity.</p>
+            </div>
+            <div class="matrix-item" onclick="scrollToAndFilterGallery('events')">
+                <svg class="matrix-icon-svg" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                <h3>Event Photography</h3>
+                <p>Comprehensive corporate visual documentation, private celebrations, and summits.</p>
+            </div>
+            <div class="matrix-item" onclick="scrollToAndFilterGallery('product')">
+                <svg class="matrix-icon-svg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                <h3>Product Photography</h3>
+                <p>High-contrast, commercially clean closeups optimized to grow market attention.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery-section" class="gallery-area">
+        <div class="section-header">
+            <p class="section-pretitle">Our Portfolio</p>
+            <h2 class="section-main-title">Featured Gallery</h2>
+            <div class="geometric-rule"></div>
+        </div>
+
+        <div class="filter-controls-container">
+            <button class="filter-trigger-btn active-filter" onclick="filterGallery('all', this)">All Work</button>
+            <button class="filter-trigger-btn" onclick="filterGallery('weddings', this)">Weddings</button>
+            <button class="filter-trigger-btn" onclick="filterGallery('baby', this)">Baby Shoot</button>
+            <button class="filter-trigger-btn" onclick="filterGallery('events', this)">Events</button>
+            <button class="filter-trigger-btn" onclick="filterGallery('product', this)">Product</button>
+        </div>
+
+        <div class="gallery-masonry-grid" id="portfolio-masonry-grid">
+            <div class="gallery-item-wrapper hide-item" data-category="events">
+                <img src="event%201.jpg" onerror="this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600'" alt="Event Session">
+                <div class="gallery-overlay">
+                    <p>Event Session</p>
+                    <h4>Cultural Harmony</h4>
+                </div>
+            </div>
+            <div class="gallery-item-wrapper hide-item" data-category="events">
+                <img src="event%202.jpeg" onerror="this.src='https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?q=80&w=600'" alt="Dance Event">
+                <div class="gallery-overlay">
+                    <p>Event Session</p>
+                    <h4>Rhythm & Grace</h4>
+                </div>
+            </div>
+            
+            <div class="gallery-item-wrapper hide-item" data-category="events">
+                <img src="Event.jpeg" onerror="this.src='https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=600'" alt="Classical Indian Dance Performance">
+                <div class="gallery-overlay">
+                    <p>Event Session</p>
+                    <h4>Traditional Performance</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item-wrapper hide-item" data-category="product">
+                <img src="product%201.jpeg" onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=600'" alt="Product Studio Craft">
+                <div class="gallery-overlay">
+                    <p>Product Session</p>
+                    <h4>Studio Craft</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item-wrapper hide-item" data-category="weddings">
+                <img src="wedding%201.jpeg" onerror="this.src='https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600'" alt="Wedding Portrait">
+                <div class="gallery-overlay">
+                    <p>Wedding Session</p>
+                    <h4>The Eternal Bond</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item-wrapper hide-item" data-category="baby">
+                <img src="baby%201.jpeg" onerror="this.src='https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=600'" alt="Baby Portrait">
+                <div class="gallery-overlay">
+                    <p>Baby Session</p>
+                    <h4>Joyful Smiles</h4>
+                </div>
+            </div>
+            
+            <div class="gallery-item-wrapper hide-item" data-category="baby">
+                <img src="Baby.jpeg" onerror="this.src='https://images.unsplash.com/photo-1504480684699-01c710896c5c?q=80&w=600'" alt="Toddler Portrait">
+                <div class="gallery-overlay">
+                    <p>Baby Session</p>
+                    <h4>Little Prince</h4>
+                </div>
+            </div>
+            
+            <div class="gallery-item-wrapper hide-item" data-category="weddings">
+                <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=600" alt="South Indian Bride">
+                <div class="gallery-overlay">
+                    <p>Bridal Portrait</p>
+                    <h4>The Royal Grace</h4>
+                </div>
+            </div>
+            <div class="gallery-item-wrapper hide-item" data-category="weddings">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Pre-Wedding Rituality">
+                <div class="gallery-overlay">
+                    <p>Pre-Wedding</p>
+                    <h4>Timeless Rituals</h4>
+                </div>
+            </div>
+            <div class="gallery-item-wrapper hide-item" data-category="events">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600" alt="Traditions Show">
+                <div class="gallery-overlay">
+                    <p>Ceremony Detail</p>
+                    <h4>Vibrant Traditions</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section" class="about-area">
+        <div class="about-image-wrapper">
+            <img class="about-img" src="Studio.jpeg" onerror="this.src='https://images.unsplash.com/photo-1520854221256-17451cc35953?q=80&w=600'" alt="Prabhu Studio Storefront Image">
+        </div>
+        <div class="about-content-wrapper">
+            <p class="section-pretitle" style="text-align: left; margin-bottom: 10px;">About Us</p>
+            <h2>We Are Prabhu Studio</h2>
+            <p>
+                We are a team of passionate photographers and creatives who love capturing real emotions and turning them into timeless memories. From weddings to commercial shoots, we focus on quality, creativity, and your absolute satisfaction.
+            </p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <svg class="metric-icon-svg" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <div class="metric-number">15+</div>
+                    <div class="metric-number-label">Years Experience</div>
+                </div>
+                <div class="metric-card">
+                    <svg class="metric-icon-svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <div class="metric-number">500+</div>
+                    <div class="metric-number-label">Happy Clients</div>
+                </div>
+                <div class="metric-card">
+                    <svg class="metric-icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <div class="metric-number">2000+</div>
+                    <div class="metric-number-label">Photoshoots</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="footer-hub">
+        <div class="hub-details-column">
+            <p class="section-pretitle">Get In Touch</p>
+            <h2>Let's Capture Your Moments</h2>
+            <p>Contact us today to book your session dates or receive premium photography quotes.</p>
+            
+            <div class="hub-channels">
+                <div class="channel-row">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 { 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 .81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <strong>Phone:</strong> <a href="tel:+919344461882">+91 93444 61882</a>
+                </div>
+                <div class="channel-row">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <strong>Email:</strong> <a href="mailto:prabhudigitalstudios@gmail.com">prabhudigitalstudios@gmail.com</a>
+                </div>
+                <div class="channel-row">
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <strong>Address:</strong> <a href="https://maps.app.goo.gl/TbV5i8RTKBKLo5o39" target="_blank">05, Kangayam Rd, Nallur, Tiruppur, Tamil Nadu 641606</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hub-action-card">
+            <h3>Find Our Studio</h3>
+            <div class="map-embed-container">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Prabhu%20Studio,%20Kangayam%20Road,%20Tiruppur&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-bottom">
+        <div class="footer-bottom-left">
+            &copy; Prabhu Studio Tirupur | All Rights Reserved
+        </div>
+        <div class="footer-bottom-right">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line><line x1="12" y1="17" x2="12" y2="20"></line></svg> 
+            Developed By Aakash
+        </div>
+    </footer>
+
+    <script>
+        function scrollToGallery() {
+            const gallerySection = document.getElementById('gallery-section');
+            if (gallerySection) {
+                gallerySection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        let slideshowInterval = null;
+
+        function filterGallery(category, buttonElement) {
+            clearInterval(slideshowInterval);
+
+            const filterButtons = document.querySelectorAll('.filter-trigger-btn');
+            filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+            
+            if (buttonElement) {
+                buttonElement.classList.add('active-filter');
+            } else {
+                filterButtons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes(`'${category}'`)) {
+                        btn.classList.add('active-filter');
+                    }
+                });
+            }
+
+            const galleryItems = Array.from(document.querySelectorAll('.gallery-item-wrapper'));
+
+            if (category === 'all') {
+                showThreeRandomImagesSmoothly(galleryItems);
+                slideshowInterval = setInterval(() => {
+                    showThreeRandomImagesSmoothly(galleryItems);
+                }, 4000);
+            } else {
+                galleryItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (itemCategory === category) {
+                        item.style.opacity = '0';
+                        item.classList.remove('hide-item');
+                        item.classList.add('show-item');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.97)';
+                        setTimeout(() => {
+                            item.classList.add('hide-item');
+                            item.classList.remove('show-item');
+                        }, 400);
+                    }
+                });
+            }
+        }
+
+        function showThreeRandomImagesSmoothly(itemsArray) {
+            itemsArray.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.97)';
+            });
+
+            setTimeout(() => {
+                itemsArray.forEach(item => {
+                    item.classList.add('hide-item');
+                    item.classList.remove('show-item');
+                });
+
+                const shuffledIndices = itemsArray
+                    .map((_, index) => index)
+                    .sort(() => 0.5 - Math.random());
+
+                const selectedIndices = shuffledIndices.slice(0, 3);
+
+                selectedIndices.forEach(idx => {
+                    const item = itemsArray[idx];
+                    item.classList.remove('hide-item');
+                    item.classList.add('show-item');
+                    
+                    void item.offsetWidth; 
+                    
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                });
+            }, 400); 
+        }
+
+        function scrollToAndFilterGallery(category) {
+            scrollToGallery();
+            filterGallery(category, null);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            filterGallery('all', document.querySelector('.filter-trigger-btn.active-filter'));
+
+            const sections = [
+                { id: 'home-section', navId: 'nav-home' },
+                { id: 'services-section', navId: 'nav-services' },
+                { id: 'gallery-section', navId: 'nav-gallery' },
+                { id: 'about-section', navId: 'nav-about' },
+                { id: 'contact-section', navId: 'nav-contact' }
+            ];
+
+            function checkActiveSection() {
+                if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 60) {
+                    updateActiveNav('nav-contact');
+                    return;
+                }
+
+                const scrollPosition = window.scrollY + 150; 
+                let activeId = 'nav-home';
+
+                for (const section of sections) {
+                    const el = document.getElementById(section.id);
+                    if (el) {
+                        const top = el.offsetTop;
+                        const height = el.offsetHeight;
+                        if (scrollPosition >= top && scrollPosition < top + height) {
+                            activeId = section.navId;
+                        }
+                    }
+                }
+                updateActiveNav(activeId);
+            }
+
+            function updateActiveNav(activeId) {
+                ['nav-home', 'nav-services', 'nav-gallery', 'nav-about', 'nav-contact'].forEach(navId => {
+                    const linkElement = document.getElementById(navId);
+                    if (linkElement) {
+                        linkElement.classList.toggle('active-nav-link', navId === activeId);
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkActiveSection);
+            window.addEventListener('resize', checkActiveSection);
+            checkActiveSection(); 
+        });
+    </script>
+</body>
+</html>
